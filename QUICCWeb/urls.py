@@ -7,6 +7,8 @@ admin.autodiscover()
 urlpatterns = patterns('',
     (r'^admin/', include(admin.site.urls)),
     url(r'^', include('cms.urls')),
+    (r'^grappelli/', include('grappelli.urls')),
+    url(r'^admin_tools/', include('admin_tools.urls')),
 )
 
 if settings.DEBUG:
