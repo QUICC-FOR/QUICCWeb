@@ -7,7 +7,7 @@ For QUICC-FOR
 ## TO DO
 
  - Admin-tools or [Grappelli](http://grappelliproject.com/) ? Customize Admin interface
- - Use [Bootstrap](http://twitter.github.io/bootstrap/) and develop template (efficient and clean) 
+ - Use [Bootstrap](http://twitter.github.io/bootstrap/)/[Font Awesome](http://fortawesome.github.io/Font-Awesome/) and develop template (efficient and clean) 
  - Install plugin [Markdown](https://github.com/bitmazk/cmsplugin-markdown) 
  - Create users and lab/researcher page for each collaborators (Access restrict by lab)
  - Identify and Generate own plugin for repetitive tasks (e.g. update publications)
