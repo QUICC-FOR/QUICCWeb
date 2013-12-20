@@ -1,0 +1,86 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html >
+<head>
+  <title>QUICCFOR Project</title>
+
+  <!-- Le styles -->
+
+  <meta charset="utf-8">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="./bootstrap/js/html5shiv.js"></script>
+      <![endif]-->
+
+      <!-- Fav and touch icons -->
+      <link rel="shortcut icon" href="{% static "Logo/favicon.png" %}">
+      <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+      <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+      <link href="{% static "main.css" %}" rel="stylesheet" type="text/css" />
+
+      <style>
+      html { 
+        background: url({% static "forest.jpg" %}) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #333333;
+        background-color:rgb(255,255,255);
+        background-color:rgba(255,255,255,0.98)!important;
+      }
+      </style>
+
+    </head>
+
+    <body>
+
+      <div class="container">
+
+        <div class="jumbotron">
+          <img src="{% static "Logo/Logo_QUICCFOR.png" %}" >
+          <p class="lead"><font color="#303c17">Quantifying and mapping impact of climate change on the forest productivity in eastern Canada</font></p>
+        </div>
+
+        <hr>
+
+        <div class="row-fluid marketing">
+          <div class="span6">
+            <h3 align="center">Bienvenue</h3>
+            <p align="center">QUICC-FOR est projet de recherche portant sur l'impact des changements climatiques sur la productivité forestière dans l'est canadien. Ce projet est piloté par un regroupement de chercheurs de plusieurs nationalités.</p>
+          </div>
+
+          <div class="span6">
+            <h3 align="center">Welcome</h3>
+            <p align="center">QUICC-FOR's research focuses on the impact of climate change on the forest productivity in eastern Canada. This project is led by a group of researchers from several nationalities.</p>
+          </div>
+        </div>
+        <div class="row-fluid marketing">      
+          <div class="span6">
+            <p align="center"> <a href="/home/"><button class="btn btn-large btn-success" type="button">Accéder au site</button></a></p>
+          </div>
+
+          <div class="span6">
+            <p align="center"> <a href="/home/"> <button class="btn btn-large btn-success" type="button">Go to website</button></a></p>
+          </div>      
+
+        </div>
+
+        <hr>
+
+        <div class="footer">
+          {% include "includes/partners.html" %}
+           <p>&copy; LaboEEC 2013</p>
+         </div>
+       </div> <!-- /container -->
+
+     </body>
+     </html>

@@ -1,0 +1,17 @@
+{% load staticfiles %}
+
+<div class="row-fluid" style="padding-top:20px">
+ <div class="span5">
+   <a href="/home/"><img src="{% static "Logo/Logo_QUICCFOR.png" %}" alt="QUICCFOR_Logo"/></a>
+ </div>
+ <div class="span7">
+  <ul class="nav nav-pills pull-right" class="vertical-align:bottom;">
+   <li {% if request.path|slice:":5" == '/home' %} class="active"{% endif %}><a href="/home/"><i class="icon-home icon-large"></i> Home</a></li>
+   <li {% if request.path|slice:":4" == '/res' %} class="active"{% endif %}><a href="/res/"><i class="icon-bug icon-large"></i> Research</a></li>
+   <li{% if request.path|slice:":5" == '/team' %} class="active"{% endif %}><a href="/team/"><i class="icon-group icon-large"></i> Team</a></li>
+   <li {% if request.path|slice:":3" == '/db' %} class="active"{% endif %}><a href="/db/"><i class="icon-bar-chart icon-large"></i> Database</a></li>
+   <li {% if request.path|slice:":5" == '/cont' %} class="active"{% endif %}><a href="/cont/"><i class="icon-envelope icon-large"></i> Contact</a></li>
+ </ul>
+</div>
+
+</div>
