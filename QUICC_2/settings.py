@@ -122,7 +122,6 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
-    'admin_bootstrap',
     'django.contrib.auth',
     'django.contrib.admin',
     'django.contrib.contenttypes',
