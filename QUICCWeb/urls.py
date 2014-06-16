@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, include, url
-from QUICC_2.views import *
+from QUICCWeb.views import *
 
 from django.contrib import admin
 admin.autodiscover()
@@ -18,9 +18,9 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     (r'^admin/', include(admin.site.urls)),
     url(r'^$', welcome),
-    url(r'^home/$', 'QUICC_2.views.home', name='home'),
-    url(r'^res/$', 'QUICC_2.views.research', name='research'),
-    url(r'^team/$', 'QUICC_2.views.team', name='team'),
-    url(r'^db/$', 'QUICC_2.views.database', name='database'),
-    url(r'^cont/$', 'QUICC_2.views.contact', name='contact'),
+    url(r'^home/$', 'QUICCWeb.views.home', name='home'),
+    url(r'^res/$', 'QUICCWeb.views.research', name='research'),
+    url(r'^team/$', 'QUICCWeb.views.team', name='team'),
+    url(r'^db/$', 'QUICCWeb.views.database', name='database'),
+    url(r'^cont/$', 'QUICCWeb.views.contact', name='contact'),
 )

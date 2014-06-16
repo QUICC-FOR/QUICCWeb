@@ -1,4 +1,4 @@
-# Django settings for QUICC_2 project.
+# Django settings for QUICCWeb project.
 import os.path
 
 DEBUG = True
@@ -20,16 +20,17 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'quiccfor_django',
-        'USER': 'quiccfor',
-        'PASSWORD': 'maplesugar',
-        'HOST': 'postgresql1.alwaysdata.com',
+        'USER': 'postgres',
+        'PASSWORD': 'maple',
+        'HOST': 'localhost',
+        'PORT': '5433'
     }
 }
 
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ['quiccfor.alwaysdata.net']
+ALLOWED_HOSTS = ['']
 #
 
 # Local time zone for this installation. Choices can be found here:
@@ -68,8 +69,8 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT =  '/QUICC_2/public/static'
-STATIC_URL = '/static/'if DEBUG else 'http://quiccfor.alwaysdata.net/static/'
+STATIC_ROOT =  '/QUICCWeb/public/static'
+STATIC_URL = '/static/' #if DEBUG else 'http://quiccfor.alwaysdata.net/static/'
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
 
@@ -109,10 +110,10 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'QUICC_2.urls'
+ROOT_URLCONF = 'QUICCWeb.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'QUICC_2.wsgi.application'
+WSGI_APPLICATION = 'QUICCWeb.wsgi.application'
 
 TEMPLATE_DIRS = (
     os.path.join(os.path.dirname(__file__), 'template').replace('\\','/'),
