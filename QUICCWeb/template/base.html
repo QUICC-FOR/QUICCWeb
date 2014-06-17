@@ -4,65 +4,75 @@
 <!DOCTYPE html>
 <html >
 <head>
-  <title>QUICCFOR Project</title>
+	<title>QUICCFOR Project</title>
 
-  <!-- Le styles -->
+	<!-- Le styles -->
 
-  <meta charset="utf-8">
+	<meta charset="utf-8">
 
-  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="./bootstrap/js/html5shiv.js"></script>
-      <![endif]-->
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			<script src="./bootstrap/js/html5shiv.js"></script>
+			<![endif]-->
 
-      <!-- Fav and touch icons -->
-      <link rel="shortcut icon" href="{% static "Logo/favicon.png" %}">
-      <link href="{% static "css/bootstrap.css" %}" rel="stylesheet" type="text/css" />
-     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-      <link href="{% static "main.css" %}" rel="stylesheet" type="text/css" />
+			<!-- Fav and touch icons -->
+			<link rel="shortcut icon" href="{% static "Logo/favicon.png" %}">
+			<link href="{% static "css/bootstrap.css" %}" rel="stylesheet" type="text/css" />
+		 	<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+			<link href="{% static "main.css" %}" rel="stylesheet" type="text/css" />
 
-      {% leaflet_js %}
-      {% leaflet_css %}
+			{% leaflet_js %}
+			{% leaflet_css %}
 
-      <style>
-      html {
-        background: url({% static "forest.jpg" %}) no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-      }
-      </style>
+			<style>
+			html {
+				background: url({% static "forest.jpg" %}) no-repeat center center fixed;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
+			}
+			</style>
 
-    </head>
+		</head>
 
-    <body>
+		<body>
 
-      <div class="container-fluid">
-        {% include "includes/nav_QF.html" %}
+			<div class="container-fluid">
+				{% include "includes/nav_QF.html" %}
 
-        {% block head %}
-        {% endblock %}
+			<div class="row">
+				 <div class="col-md-12">
+					<p class="text-center" style="font-weight: 600;">
+							<img style="max-height:120px;margin-bottom:-35px;" src="{% static "Logo/Logo_QUICCFORTop.png" %}" alt="QUICCFOR_Logo"/>
+							<br>
+							Quantifying and mapping impact of Climate Change on the Forest productivity in eastern Canada</p>
+				</div>
+			</div>
 
 
-        {% block content %}
-        {% endblock %}
+				{% block head %}
+				{% endblock %}
 
-        <div class="footer">
-          {% block footer %}
-          {% endblock %}
-          <div class="row" style="padding-top:30px;">
-              <div class="col-md-6"  style="font-family:Source Sans Pro;"> <p class="text-left"><small><b>Photo credits - Camille Albouy</b> <br> &copy; <b>LaboEEC 2013</b></small></p></div>
-              <div class="col-md-6"  style="font-family:Source Sans Pro;"> <p class="text-right"> <small>Powered by <a href="https://www.djangoproject.com/"><b>Django</b></a> and <a href="http://twitter.github.io/bootstrap/"> <b>Bootstrap</b></a></small></p></div>
-            </div>
-        </div>
-        </div>
-    <!-- Le javascript
-    ================================================== -->
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="{% static "bootstrap.min.js" %}"></script>
-    <!-- Placed at the end of the document so the pages load faster -->
-  </body>
-  </html>
+
+				{% block content %}
+				{% endblock %}
+
+				<div class="footer">
+					{% block footer %}
+					{% endblock %}
+					<div class="row" style="padding-top:30px;">
+							<div class="col-md-6"  style="font-family:Source Sans Pro;"> <p class="text-left"><b>Photo credits - S. & C. Albouy</b> <br> &copy; <b>LaboEEC 2013</b></p></div>
+							<div class="col-md-6"  style="font-family:Source Sans Pro;"> <p class="text-right"> Powered by <a href="https://www.djangoproject.com/"><b>Django</b></a> and <a href="http://twitter.github.io/bootstrap/"> <b>Bootstrap</b></a></p></div>
+						</div>
+				</div>
+				</div>
+		<!-- Le javascript
+		================================================== -->
+				<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="{% static "bootstrap.min.js" %}"></script>
+		<!-- Placed at the end of the document so the pages load faster -->
+	</body>
+	</html>
