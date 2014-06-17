@@ -2,11 +2,13 @@
 
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">
-                    <img style="max-height:65px;"src="{% static "Logo/Logo_QUICCFORTop.png" %}" alt="QUICCFOR_Logo"/>
-                </a>
+            <div class="row">
+ 		 <div class="col-md-12">
+ 		 	<p class="text-center">
+                    <img style="max-height:100px;margin-bottom:-30px;"src="{% static "Logo/Logo_QUICCFORTop.png" %}" alt="QUICCFOR_Logo"/>
+                    <br>
+                  Quantifying and mapping impact of Climate Change on the Forest productivity in eastern Canada</p>
+		</div>
             </div>
 
 	<ul class="nav navbar-nav navbar-right">
@@ -17,6 +19,7 @@
 		 <li {% if request.path|slice:":3" == '/db' %} class="active"{% endif %}><a href="/db/"> <i class="fa fa-database fa-1g"></i> Database</a></li>
 		 <li {% if request.path|slice:":5" == '/cont' %} class="active"{% endif %}><a href="/cont/"> <i class="fa fa-envelope fa-1g"></i> Contact</a></li>
 	</ul>
+            <!-- Brand and toggle get grouped for better mobile display -->
 </div>
 </nav>
 

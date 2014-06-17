@@ -19,5 +19,8 @@ def team(request):
 def database(request):
     return render(request, 'database.html')
 
+def database(request):
+    return render(request, 'publications.html')
+
 def contact(request):
     return render(request, 'contact.html')

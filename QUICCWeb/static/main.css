@@ -7,9 +7,11 @@ body {
  font-size: 14px;
  line-height: 20px;
  color: #333333;
- margin-top: 70px;
+ margin-top: 200px;
+ padding-top: 20px;
+ padding-bottom:10px;
  margin-bottom:40px;
- background-color: rgba(255, 255, 255, 0.90);
+ background-color: rgba(255, 255, 255, 0.95);
 }
 
 
@@ -208,4 +210,12 @@ hr
   border-bottom-style: solid;
   border-bottom-color: #ffffff;
   opacity: 0.4;
+}
+
+
+/* Ligne 3963 */
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus
+{
+  color: #555555;
+  background-color: #bdd886;
 }
