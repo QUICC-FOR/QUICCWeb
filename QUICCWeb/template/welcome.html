@@ -16,8 +16,8 @@
 
       <!-- Fav and touch icons -->
       <link rel="shortcut icon" href="{% static "Logo/favicon.png" %}">
-      <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-      <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+      <link href="{% static "css/bootstrap.css" %}" rel="stylesheet" type="text/css" />
+      <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
       <link href="{% static "main.css" %}" rel="stylesheet" type="text/css" />
 
       <style>
@@ -29,13 +29,16 @@
         background-size: cover;
       }
       body {
-        margin: 0;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        line-height: 20px;
-        color: #333333;
-        background-color:rgb(255,255,255);
-        background-color:rgba(255,255,255);
+       margin: 0px;
+       font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+       font-size: 14px;
+       line-height: 20px;
+       color: #333333;
+       margin-top: 80px;
+       padding-top: 20px;
+       padding-bottom:10px;
+       margin-bottom:40px;
+      background-color: #FFFFFF;
       }
       </style>
 
@@ -43,42 +46,47 @@
 
     <body>
 
-      <div class="container">
+      <div class="container-fluid">
 
         <div class="jumbotron">
-          <img src="{% static "Logo/Logo_QUICCFOR.png" %}" >
-          <p class="lead"><font color="#303c17">Quantifying and mapping impact of climate change on the forest productivity in eastern Canada</font></p>
+          <img style="max-height:150px;" src="{% static "Logo/Logo_QUICCFOR.png" %}" >
+          <p>Quantifying and mapping impact of climate change on the forest productivity in Eastern Canada</p>
         </div>
 
         <hr>
 
-        <div class="row-fluid marketing">
-          <div class="span6">
+        <div class="row">
+        <!--          <div class="col-md-6">
             <h3 align="center">Bienvenue</h3>
             <p align="center">QUICC-FOR est projet de recherche portant sur l'impact des changements climatiques sur la productivité forestière dans l'est canadien. Ce projet est piloté par un regroupement de chercheurs de plusieurs nationalités.</p>
-          </div>
+          </div>  -->
 
-          <div class="span6">
+          <div class="col-md-6 col-md-offset-3">
             <h3 align="center">Welcome</h3>
             <p align="center">QUICC-FOR's research focuses on the impact of climate change on the forest productivity in eastern Canada. This project is led by a group of researchers from several nationalities.</p>
           </div>
         </div>
-        <div class="row-fluid marketing">
-          <div class="span6">
+        <div class="row">
+<!--           <div class="col-md-6">
             <p align="center"> <a href="/home/"><button class="btn btn-large btn-success" type="button">Accéder au site</button></a></p>
-          </div>
+          </div> -->
 
-          <div class="span6">
+          <div class="col-md-6 col-md-offset-3">
             <p align="center"> <a href="/home/"> <button class="btn btn-large btn-success" type="button">Go to website</button></a></p>
           </div>
-
         </div>
 
         <hr>
 
+
+         {% include "includes/partners.html" %}
+
         <div class="footer">
-          {% include "includes/partners.html" %}
-           <p>&copy; LaboEEC 2013</p>
+
+          <div class="row" style="padding-top:30px;">
+              <div class="col-md-6"  style="font-family:Source Sans Pro;"> <p class="text-left">&copy; <b>LaboEEC 2013</b></p></div>
+              <div class="col-md-6"  style="font-family:Source Sans Pro;"> <p class="text-right"> Powered by <a href="https://www.djangoproject.com/"><b>Django</b></a> and <a href="http://twitter.github.io/bootstrap/"> <b>Bootstrap</b></a></p></div>
+            </div>
          </div>
        </div> <!-- /container -->
 
