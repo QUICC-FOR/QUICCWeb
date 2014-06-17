@@ -1,30 +1,21 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300);
 @import url(http://fonts.googleapis.com/css?family=Oxygen:700,300,400);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,300,400italic,500,500italic,700,700italic);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900);
 
 body {
  margin: 0px;
- font-family: 'Oxygen', "Helvetica Neue", Helvetica, Arial, sans-serif;
+ font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
  font-size: 14px;
  line-height: 20px;
  color: #333333;
- margin-top: 200px;
+ margin-top: 130px;
  padding-top: 20px;
  padding-bottom:10px;
  margin-bottom:40px;
- background-color: rgba(255, 255, 255, 0.95);
+ background-color: #f8f8f8;
 }
 
-
-.navbar-brand
-{
-  float: left;
-  height: 50px;
-  padding-top:2px;
-  padding-bottom:2px;
-  padding-left: 5px;
-  font-size: 18px;
-  line-height: 20px;
-}
 
 .breadcrumb
 {
@@ -46,6 +37,10 @@ body {
   border-bottom-left-radius: 4px;
 }
 
+h2, h3 {
+   font-weight: 700;
+}
+
 a {
  color: #273113;
  text-decoration: none;
@@ -54,13 +49,7 @@ a {
 p {
   margin-top: 5px;
   margin-bottom: 10px;
-  font-family: 'Oxygen';
-}
-
-
-.logo {
-  margin-left: 8px;
-  margin-right: 8px;
+  font-family: 'Raleway';
 }
 
 a:hover,
@@ -83,13 +72,17 @@ img {
 
 /* Main marketing message and sign up button */
 .jumbotron {
- margin-top: 30px;
+ margin-top: 10px;
  margin-right: 0px;
  margin-bottom: 10px;
  margin-left: 0px;
  text-align: center;
- padding-top: 0px;
+ font-size: 10px;
+padding-top: 0px;
+padding-bottom: 0px;
+background-color: #FFFFFF;
 }
+
 .jumbotron h1 {
  font-size: 72px;
  line-height: 1;
@@ -98,42 +91,12 @@ img {
  font-size: 21px;
  padding: 14px 14px;
 }
-/* Supporting marketing content */
-.marketing {
- margin: 10px auto;
-}
-.marketing p + h4 {
- margin-top: 10px auto;
-}
+
 
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
   max-width: 900px
-}
-
-.container {
- margin-right: auto;
- margin-left: auto;
- margin-top: 60px;
- margin-bottom: 60px;
- *zoom: 1;
-}
-
-.lead {
- margin-top: 20px;
- margin-bottom: 20px;
- font-size: 21px;
- font-weight: 300;
- line-height: 30px;
-
-}
-
-
-.row > .span2 {
- display: inline-block !important;
- vertical-align: middle !important;
- float: none !important;
 }
 
 
@@ -212,10 +175,24 @@ hr
   opacity: 0.4;
 }
 
+.navbar-default{
+  font-weight: 600;
+}
 
 /* Ligne 3963 */
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus
 {
   color: #555555;
   background-color: #bdd886;
+  border: none;
 }
+
+.navbar-fixed-top
+{
+  top: 0px;
+  border-top-width: 0px;
+  border-right-width-value: 0px;
+  border-bottom-width: 0px;
+  border-left-width-value: 0px;
+}
+
