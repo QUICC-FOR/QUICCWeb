@@ -2,14 +2,26 @@
 @import url(http://fonts.googleapis.com/css?family=Oxygen:700,300,400);
 
 body {
- margin: 0;
+ margin: 0px;
  font-family: 'Oxygen', "Helvetica Neue", Helvetica, Arial, sans-serif;
  font-size: 14px;
  line-height: 20px;
  color: #333333;
- margin-top: 40px;
+ margin-top: 70px;
  margin-bottom:40px;
- background-color: rgba(255, 255, 255, 0.98);
+ background-color: rgba(255, 255, 255, 0.90);
+}
+
+
+.navbar-brand
+{
+  float: left;
+  height: 50px;
+  padding-top:2px;
+  padding-bottom:2px;
+  padding-left: 5px;
+  font-size: 18px;
+  line-height: 20px;
 }
 
 .breadcrumb
@@ -122,39 +134,6 @@ img {
  float: none !important;
 }
 
-.nav-pills > .active > a,
-.nav-pills > .active > a:hover,
-.nav-pills > .active > a:focus {
- color: #ffffff;
- background-color: #273113;
-}
-
-.nav-list > .active > a,
-.nav-list > .active > a:hover,
-.nav-list > .active > a:focus {
- color: #ffffff;
- text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
- background-color: #273113;
-}
-
-.nav-list > li > a,
-.nav-list .nav-header {
- margin-right: -15px;
- margin-left: -15px;
-}
-
-.nav > li > a:hover,
-.nav > li > a:focus {
- text-decoration: none;
- background-color: #a1bc6b;
- color: #273113;
-}
-
-.nav-pills > li > a:hover {
-  text-decoration: none;
-  background-color: rgb(161, 188, 107);
-  color: #273113;
-}
 
 .btn-success {
  color: #ffffff;
@@ -229,16 +208,4 @@ hr
   border-bottom-style: solid;
   border-bottom-color: #ffffff;
   opacity: 0.4;
-}
-
-
-.breadcrumb > .active
-{
-  color: #8bae43;
-}
-
-.breadcrumb > li
-{
-  display: inline-block;
-  text-shadow: none;
 }
