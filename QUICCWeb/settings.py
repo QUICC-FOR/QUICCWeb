@@ -23,7 +23,7 @@ DATABASES = {
         'USER': 'postgres',
         'PASSWORD': 'maple',
         'HOST': 'localhost',
-        'PORT': '5433'
+        'PORT': '5433',
     }
 }
 
@@ -130,10 +130,22 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'leaflet',
     # Uncomment the next line to enable the admin:
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
+
+
+LEAFLET_CONFIG = {
+    'DEFAULT_CENTER': (6.0, 45.0),
+    'DEFAULT_ZOOM': 16,
+    'MIN_ZOOM': 3,
+    'MAX_ZOOM': 18,
+    'TILES': 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    'MINIMAP': True,
+    'SRID': 2154,
+}
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

@@ -23,4 +23,9 @@ urlpatterns = patterns('',
     url(r'^team/$', 'QUICCWeb.views.team', name='team'),
     url(r'^db/$', 'QUICCWeb.views.database', name='database'),
     url(r'^cont/$', 'QUICCWeb.views.contact', name='contact'),
+
+)
+
+urlpatterns += patterns('QUICCWeb.formMembers.views',
+                       url(r'^contact$', 'contact', name='contact'),
 )

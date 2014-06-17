@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load leaflet_tags %}
 
 <!DOCTYPE html>
 <html >
@@ -16,26 +17,29 @@
 
       <!-- Fav and touch icons -->
       <link rel="shortcut icon" href="{% static "Logo/favicon.png" %}">
-      <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+      <link href="{% static "css/bootstrap.css" %}" rel="stylesheet" type="text/css" />
       <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
       <link href="{% static "main.css" %}" rel="stylesheet" type="text/css" />
 
+      {% leaflet_js %}
+      {% leaflet_css %}
+
       <style>
-      html { 
-        background: url({% static "forest.jpg" %}) no-repeat center center fixed; 
+      html {
+        background: url({% static "forest.jpg" %}) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
       }
       </style>
+
     </head>
 
     <body>
 
       <div class="container-fluid">
         {% include "includes/nav_QF.html" %}
-        <hr>
 
         {% block head %}
         {% endblock %}
@@ -48,8 +52,7 @@
           {% block footer %}
           {% endblock %}
           <div class="row-fluid">
-            <hr>
-              <div class="span5 " style="font-family:Source Sans Pro;"> &copy; <b>LaboEEC 2013</b></div>
+              <div class="span6 text-left" style="font-family:Source Sans Pro;"> &copy; <b>LaboEEC 2013</b></div>
               <div class="span6 text-right" style="font-family:Source Sans Pro;"> Powered by <a href="https://www.djangoproject.com/"><b>Django</b></a> and <a href="http://twitter.github.io/bootstrap/"> <b>Bootstrap</b></a></div>
             </div>
         </div>

@@ -1,46 +1,36 @@
-{% extends "base.html" %}       
+{% extends "base.html" %}
 {% load staticfiles %}
 
-{% block head %}
-<div class="row-fluid">
-  <div class="span12">
-    <h2><i class="icon-bar-chart"></i> Database</h2>
-    <p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tristique nibh in justo dapibus, eget mollis quam consectetur. Etiam sollicitudin, tellus sed tempus hendrerit, libero est pharetra massa, nec adipiscing nulla elit vel massa. Suspendisse potenti. Donec feugiat mollis bibendum. Integer mauris odio, feugiat a gravida at, imperdiet non metus. Nunc quis consequat sem. Integer vitae rhoncus velit. Praesent facilisis lorem et purus suscipit, non tincidunt nisi pellentesque. Sed eu purus id est dapibus pretium. Donec tincidunt lorem sit amet dui volutpat, vitae pretium erat mollis. Vivamus eget volutpat turpis, at tincidunt nunc.</p>
-
-    <p align="justify">Curabitur hendrerit malesuada dapibus. Maecenas pretium elementum quam id vulputate. Cras porta vestibulum enim, non vehicula nunc adipiscing et. Nunc facilisis sollicitudin ligula. Etiam dignissim molestie erat, eu feugiat purus. Pellentesque dui eros, congue non sapien quis, feugiat pretium sem. Proin lorem neque, tincidunt sit amet leo vitae, scelerisque condimentum dui. In hac habitasse platea dictumst. </p>
-  </div>
-</div>
-{% endblock %}
 
 {% block content %}
-<div class="row-fluid">
-  <div class="span6">
-    <div class="alert alert-success">
-     <h4><i class="icon-chevron-sign-down icon-large"></i>  Objective 1</h4>
-     <p align="justify">Curabitur hendrerit malesuada dapibus. Maecenas pretium elementum quam id vulputate. Cras porta vestibulum enim, non vehicula nunc adipiscing et.  </p>
-   </div>
- </div>
- <div class="span6">
-  <div class="alert alert-success">
-   <h4><i class="icon-chevron-sign-down icon-large"></i>  Objective 2</h4>
-   <p align="justify">Curabitur hendrerit malesuada dapibus. Maecenas pretium elementum quam id vulputate. Cras porta vestibulum enim, non vehicula nunc adipiscing et. Nunc facilisis sollicitudin ligula. </p>
- </div>
-</div>
-</div>
-<div class="row-fluid">
-  <div class="span12">
-    <p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tristique nibh in justo dapibus, eget mollis quam consectetur. Etiam sollicitudin, tellus sed tempus hendrerit, libero est pharetra massa, nec adipiscing nulla elit vel massa. Suspendisse potenti. Donec feugiat mollis bibendum. Integer mauris odio, feugiat a gravida at, imperdiet non metus. Nunc quis consequat sem. Integer vitae rhoncus velit. Praesent facilisis lorem et purus suscipit, non tincidunt nisi pellentesque. Sed eu purus id est dapibus pretium. Donec tincidunt lorem sit amet dui volutpat, vitae pretium erat mollis. Vivamus eget volutpat turpis, at tincidunt nunc.</p>
+<div id="map">
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+          <script>
 
-    <p align="justify">Curabitur hendrerit malesuada dapibus. Maecenas pretium elementum quam id vulputate. Cras porta vestibulum enim, non vehicula nunc adipiscing et. Nunc facilisis sollicitudin ligula. Etiam dignissim molestie erat, eu feugiat purus. Pellentesque dui eros, congue non sapien quis, feugiat pretium sem. Proin lorem neque, tincidunt sit amet leo vitae, scelerisque condimentum dui. In hac habitasse platea dictumst. </p>
-  </div>
+    var map = L.map('map').setView([48.45245, -68.51205], 12);
+
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+
+    L.marker([48.45245, -68.51205]).addTo(map)
+      .bindPopup("Université du Québec à Rimouski").openPopup();
+
+    var popup = L.popup();
+
+  </script>
 </div>
-<div class="row-fluid">
-  <div class="span12">
-   <p align="center">
-    <img src="{% static "test12.jpg" %}" class="img-rounded" alt="illustration 1"/>
-    <img src="{% static "test32.jpg" %}" class="img-rounded" alt="illustration 2"/>
-    <img src="{% static "test22.jpg" %}" class="img-rounded" alt="illustration 3"/>
-  </p>
-</div>
-</div>
+
+<h2 style="margin-top:15px">Contact</h2>
+
+<p>
+<b>QUICC-FOR Project</b><br>
+Theoritical laboratory in ecology<br>
+Université du Québec à Rimouski (UQAR)<br>
+Département de Biologie, Chimie et Géographie<br>
+300 Allée des Ursulines, Rimouski, QC G5L 3A1, Canada<br>
+<br>
+<b>Email:</b><a href="mailto:dominique_gravel@uqar.ca">dominique_gravel@uqar.ca</a><br>
+<b>Office:</b> 418 723-1986 #1751</p>
 {% endblock %}
