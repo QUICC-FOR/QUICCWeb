@@ -3,34 +3,5 @@
 
 
 {% block content %}
-<div id="map">
-    <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
-          <script>
 
-    var map = L.map('map').setView([48.45245, -68.51205], 12);
-
-    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-
-
-    L.marker([48.45245, -68.51205]).addTo(map)
-      .bindPopup("Université du Québec à Rimouski").openPopup();
-
-    var popup = L.popup();
-
-  </script>
-</div>
-
-<h2 style="margin-top:15px">Contact</h2>
-
-<p>
-<b>QUICC-FOR Project</b><br>
-Theoritical laboratory in ecology<br>
-Université du Québec à Rimouski (UQAR)<br>
-Département de Biologie, Chimie et Géographie<br>
-300 Allée des Ursulines, Rimouski, QC G5L 3A1, Canada<br>
-<br>
-<b>Email:</b><a href="mailto:dominique_gravel@uqar.ca">dominique_gravel@uqar.ca</a><br>
-<b>Office:</b> 418 723-1986 #1751</p>
 {% endblock %}
