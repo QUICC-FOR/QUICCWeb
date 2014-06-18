@@ -19,7 +19,7 @@ def team(request):
 def database(request):
     return render(request, 'database.html')
 
-def database(request):
+def publications(request):
     return render(request, 'publications.html')
 
 def contact(request):
