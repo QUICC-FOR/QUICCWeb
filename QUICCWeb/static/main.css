@@ -41,14 +41,23 @@ h2, h3 {
    font-weight: 700;
 }
 
+h3 {
+  margin-top:20px;
+  margin-bottom: 20px;
+}
+
+h4 {
+  font-weight: 600;
+}
+
 a {
  color: #273113;
  text-decoration: none;
 }
 
 p {
-  margin-top: 5px;
-  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   font-family: 'Raleway';
 }
 
