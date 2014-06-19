@@ -1,12 +1,10 @@
 {% extends "base.html" %}
-{% load leaflet_tags %}
 {% load staticfiles %}
 
 
 {% block content %}
 
 
-{% leaflet_map "contact" callback="main_map_init" %}
 		<script type="text/javascript">
 				var map = L.map('map').setView([48.45245, -68.51205], 12);
 
