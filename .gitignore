@@ -1,3 +1,4 @@
 settings_UQAR.py
 settings_local.py
 settings.py
+*.pyc
