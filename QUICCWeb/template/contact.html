@@ -5,6 +5,8 @@
 {% block head %}
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
 	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<link href="{% static "css/leaflet.awesome-markers.css" %}" rel="stylesheet" type="text/css" />
+	<script src="{% static "js/leaflet.awesome-markers.js" %}"></script>
 {% endblock %}
 
 {% block content %}
@@ -25,17 +27,25 @@ Département de Biologie, Chimie et Géographie<br>
 
  <script type="text/javascript">
 	var map = new L.Map('map');
-	var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+	var osmUrl='https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png';
 	var osmAttrib='Map data &copy; OpenStreetMap contributors';
-	var osm = new L.TileLayer(osmUrl, {minZoom: 5, maxZoom: 18, attribution: osmAttrib});
+	var osm = new L.tileLayer('http://{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png', {
+	attribution: '&copy; <a href="http://www.opencyclemap.org">OpenCycleMap</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
+	});
+
+	var redMarker = L.AwesomeMarkers.icon({
+	    icon: 'coffee',
+	    markerColor: 'red'
+	  });
 
 	map.addLayer(osm);
 
-	map.setView(new L.LatLng(48.45245, -68.51205),9);
+	map.setView(new L.LatLng(48.45245, -68.51205),10);
 
-    	L.marker([48.45245, -68.51205]).addTo(map)
-      	.bindPopup("<b>QUICC-FOR Project</b> <br>Université du Québec à Rimouski").openPopup();
+	L.marker([48.45245, -68.51205], {icon: L.AwesomeMarkers.icon({icon: 'home', markerColor: 'green', prefix: 'fa', spin:false}) }).addTo(map);
 
+
+    	L.control.scale().addTo(map);
     	var popup = L.popup();
   </script>
 
