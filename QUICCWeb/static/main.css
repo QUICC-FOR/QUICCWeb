@@ -93,6 +93,11 @@ padding-bottom: 0px;
 background-color: #f8f8f8;
 }
 
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .jumbotron h1 {
  font-size: 72px;
  line-height: 1;
