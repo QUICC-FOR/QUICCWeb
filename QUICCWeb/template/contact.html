@@ -2,22 +2,14 @@
 {% load staticfiles %}
 
 
+{% block head %}
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+{% endblock %}
+
 {% block content %}
 
-
-		<script type="text/javascript">
-				var map = L.map('map').setView([48.45245, -68.51205], 12);
-
-				L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-						attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-				}).addTo(map);
-
-
-				L.marker([48.45245, -68.51205]).addTo(map)
-					.bindPopup("Université du Québec à Rimouski").openPopup();
-
-				var popup = L.popup();
-	</script>
+ <div id="map" style="height: 300px;"> </div>
 
 <h2 style="margin-top:15px">Contact</h2>
 
@@ -30,4 +22,24 @@ Département de Biologie, Chimie et Géographie<br>
 <br>
 <b>Email:</b><a href="mailto:dominique_gravel@uqar.ca">dominique_gravel@uqar.ca</a><br>
 <b>Office:</b> 418 723-1986 #1751</p>
+
+ <script type="text/javascript">
+	var map = new L.Map('map');
+	var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+	var osmAttrib='Map data &copy; OpenStreetMap contributors';
+	var osm = new L.TileLayer(osmUrl, {minZoom: 5, maxZoom: 18, attribution: osmAttrib});
+
+	map.addLayer(osm);
+
+	map.setView(new L.LatLng(48.45245, -68.51205),9);
+
+    	L.marker([48.45245, -68.51205]).addTo(map)
+      	.bindPopup("<b>QUICC-FOR Project</b> <br>Université du Québec à Rimouski").openPopup();
+
+    	var popup = L.popup();
+  </script>
+
+{% endblock %}
+
+{% block footer %}
 {% endblock %}
