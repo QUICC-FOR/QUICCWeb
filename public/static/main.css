@@ -53,6 +53,7 @@ h4 {
 a {
  color: #273113;
  text-decoration: none;
+ font-weight: 700;
 }
 
 p {
@@ -89,7 +90,12 @@ img {
  font-size: 10px;
 padding-top: 0px;
 padding-bottom: 0px;
-background-color: #FFFFFF;
+background-color: #f8f8f8;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .jumbotron h1 {
@@ -138,20 +144,11 @@ background-color: #FFFFFF;
 }
 
 .alert {
- padding: 8px 14px 8px 14px;
- margin-bottom: 20px;
- margin-left: 10px;
- margin-right: 10px;
  background-color: #fcf8e3;
  border: 1px solid #fbeed5;
  -webkit-border-radius: 4px;
  -moz-border-radius: 4px;
  border-radius: 4px;
-}
-
-.alert-success h4 {
- color: #303c17;
- margin-bottom: 5px
 }
 
 .alert-success {
@@ -205,3 +202,4 @@ hr
   border-left-width-value: 0px;
 }
 
+#map { height: 180px; }
