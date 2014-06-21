@@ -11,20 +11,25 @@
 
 {% block content %}
 
- <div id="map" style="height: 300px;"> </div>
+<div class="row" style="margin-top:40px">
+	 <div class="col-md-7">
+ 		<div id="map" style="height: 300px;"> </div>
+ 	</div>
 
-<h2 style="margin-top:15px">Contact</h2>
+ 	<div class="col-md-5">
+		<h2 style="margin-top:15px"><i class="fa fa-envelope fa-1g"></i>  Contact</h2>
 
-<p>
-<b>QUICC-FOR Project</b><br>
-Theoritical laboratory in ecology<br>
-Université du Québec à Rimouski (UQAR)<br>
-Département de Biologie, Chimie et Géographie<br>
-300 Allée des Ursulines, Rimouski, QC G5L 3A1, Canada<br>
-<br>
-<b>Email:</b><a href="mailto:dominique_gravel@uqar.ca">dominique_gravel@uqar.ca</a><br>
-<b>Office:</b> 418 723-1986 #1751</p>
-
+		<p>
+		<b>QUICC-FOR Project</b><br>
+		Theoritical laboratory in ecology<br>
+		Université du Québec à Rimouski (UQAR)<br>
+		Département de Biologie, Chimie et Géographie<br>
+		300 Allée des Ursulines, Rimouski, QC G5L 3A1, Canada<br>
+		<br>
+		<b>Email:</b><a href="mailto:dominique_gravel@uqar.ca">dominique_gravel@uqar.ca</a><br>
+		<b>Office:</b> 418 723-1986 #1751</p>
+	</div>
+</div>
  <script type="text/javascript">
 	var map = new L.Map('map');
 	var osmUrl='https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png';
