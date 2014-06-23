@@ -47,7 +47,6 @@
 		</p>
 	</div>
 </div>
-	<hr>
 </div>
 
 	 <div class="col-md-12">
@@ -74,9 +73,11 @@
 <div class="panel panel-success">
       <div class="panel-heading"><strong>Database Description</strong></div>
       <div class="panel-body">
-      	<div class="col-md-8">
-	<h4>Plots location</h4>
+      	<div class="col-md-12">
+	<h4 style="margin-top:10px;margin-bottom:20px;">Plots location and description <hr></h4>
+
 		<div id="map" style="height: 400px;"> </div>
+	<h4 style="margin-top:30px;margin-bottom:20px;">Meta-data<hr></h4>
 	</div>
 	</div>
 </div>
@@ -99,16 +100,15 @@
 
 	map.addLayer(osm);
 
-	map.setView(new L.LatLng(46.71549, -72.51205),5);
+	map.setView(new L.LatLng(46.71549, -72.51205),6);
 
-	L.marker([48.334343, -68.812623], {icon: L.AwesomeMarkers.icon({icon: 'tree', markerColor: 'blue', prefix: 'fa', spin:false}) }).addTo(map);
-	L.marker([48.1770172, -79.4579449], {icon: L.AwesomeMarkers.icon({icon: 'tree', markerColor: 'blue', prefix: 'fa', spin:false}) }).addTo(map);
-	L.marker([45.096646 , -72.59594], {icon: L.AwesomeMarkers.icon({icon: 'tree', markerColor: 'blue', prefix: 'fa', spin:false}) }).addTo(map);
-
-
-
-		L.control.scale().addTo(map);
-		var popup = L.popup();
+	L.marker([48.334343, -68.812623], {icon: L.AwesomeMarkers.icon({icon: 'tree', markerColor: 'red', prefix: 'fa', spin:false}) }).addTo(map)
+		.bindPopup("<b>Bas-Saint-Laurent permanent plot</b><br /><b>Status:</b> National Park <br /> <b>Number of trees recorded:</b> 18,736<br /> <b>Size:</b> 10 ha");
+	L.marker([48.1770172, -79.4579449], {icon: L.AwesomeMarkers.icon({icon: 'tree', markerColor: 'red', prefix: 'fa', spin:false}) }).addTo(map)
+		.bindPopup("<b>Abitibi permanent plot</b><br /><b>Status:</b>Ecological Reserve <br /> <b>Number of trees recorded:</b>2,777 <br /> <b>Size:</b> 5 ha");
+	L.marker([45.096646 , -72.59594], {icon: L.AwesomeMarkers.icon({icon: 'tree', markerColor: 'red', prefix: 'fa', spin:false}) }).addTo(map)
+		.bindPopup("<b>Estrie permanent plot</b><br /><b>Status:</b> Ecological Reserve <br /> <b>Number of trees recorded:</b> 16,000 <br /> <b>Size:</b> 20 ha").openPopup();
+	var popup = L.popup();
   </script>
 
 

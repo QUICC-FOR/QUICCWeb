@@ -30,7 +30,7 @@ body {
 .panel-success > .panel-heading
 {
   color: #333333;
-  background-color: #96bc49;
+  background-color: #bdd886;
   border-top-color: #96bc49;
   border-right-color-value: #96bc49;
   border-bottom-color: #96bc49;
@@ -164,7 +164,7 @@ background-color: #f8f8f8;
 }
 
 .alert {
- background-color: #fcf8e3;
+ background-color: #bdd886;
  border: 1px solid #fbeed5;
  -webkit-border-radius: 4px;
  -moz-border-radius: 4px;
@@ -173,7 +173,7 @@ background-color: #f8f8f8;
 
 .alert-success {
  color:inherit;
- background-color: #bcd982;
+ background-color: #bdd886;
  border-color: #96bc49;
 }
 
