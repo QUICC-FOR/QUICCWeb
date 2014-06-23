@@ -62,12 +62,14 @@ h2, h3 {
 }
 
 h3 {
-  padding-top:15px;
-  padding-bottom: 15px;
+  padding-top:10px;
+  padding-bottom: 10px;
 }
 
 h4 {
   font-weight: 600;
+    padding-top:10px;
+  padding-bottom: 10px;
 }
 
 a {
@@ -222,4 +224,6 @@ hr
   border-left-width-value: 0px;
 }
 
-#map { height: 180px; }
+#map { height: 180px;
+margin-top: 10px;
+margin-bottom: :10px;}
