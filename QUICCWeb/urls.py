@@ -1,5 +1,6 @@
 from django.conf.urls import patterns, include, url
 from QUICCWeb.views import *
+from resprofile.views import *
 
 from django.contrib import admin
 admin.autodiscover()
@@ -16,7 +17,10 @@ urlpatterns = patterns('',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    (r'^admin/', include(admin.site.urls)),
+    (r'^grappelli/', include('grappelli.urls')), # grappelli URLS
+    url(r'^admin/publications/publication/import_bibtex/$', 'publications.admin_views.import_bibtex'),
+    (r'^admin/',  include(admin.site.urls)), # admin site
+   # url(r'^publications/', include('publications.urls')),
     url(r'^$', welcome),
     url(r'^home/$', 'QUICCWeb.views.home', name='home'),
     url(r'^res/$', 'QUICCWeb.views.research', name='research'),
@@ -24,5 +28,5 @@ urlpatterns = patterns('',
     url(r'^db/$', 'QUICCWeb.views.database', name='database'),
     url(r'^pub/$', 'QUICCWeb.views.publications', name='publications'),
     url(r'^cont/$', 'QUICCWeb.views.contact', name='contact'),
-    url(r'^register/$',views.register, name='register'), # ADD NEW PATTERN!
+    url(r'^register/$','resprofile.views.register', name='register'),
 )

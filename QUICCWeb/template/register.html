@@ -5,13 +5,7 @@
 {% endblock %}
 
 {% block content %}
-        {% if registered %}
-        Rango says: <strong>thank you for registering!</strong>
-        <a href="/resprofile/">Return to the homepage.</a><br />
-        {% else %}
-        Rango says: <strong>register here!</strong><br />
-
-        <form id="user_form" method="post" action="/resprofile/register/"
+        <form id="user_form" method="post" action="/register/"
                 enctype="multipart/form-data">
 
             {% csrf_token %}
@@ -25,5 +19,4 @@
             <!-- Provide a button to click to submit the form. -->
             <input type="submit" name="submit" value="Register" />
         </form>
-        {% endif %}
 {% endblock %}

@@ -1,5 +1,13 @@
-from django.shortcuts import render
+from django.http import HttpResponse, Http404
+from django.template import Context
+from django.template.loader import get_template
+from django.contrib.auth.models import User
+from django.shortcuts import render_to_response
+from django.http import HttpResponseRedirect
+from django.contrib.auth import logout
+from django.template import RequestContext
 from resprofile.forms import UserForm, UserProfileForm
+import datetime
 
 def register(request):
     # Like before, get the request's context.
@@ -57,6 +65,6 @@ def register(request):
 
     # Render the template depending on the context.
     return render_to_response(
-            'resprofile/register.html',
+            'register.html',
             {'user_form': user_form, 'profile_form': profile_form, 'registered': registered},
             context)
