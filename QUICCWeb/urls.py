@@ -26,7 +26,3 @@ urlpatterns = patterns('',
     url(r'^cont/$', 'QUICCWeb.views.contact', name='contact'),
 
 )
-
-urlpatterns += patterns('QUICCWeb.formMembers.views',
-                       url(r'^contact$', 'contact', name='contact'),
-)
