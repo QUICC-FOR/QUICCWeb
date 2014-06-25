@@ -10,7 +10,7 @@
 				{% for details in publi_details%}
 			<h3>In review </h3>
 					{% if details.type_id == 8 %}
-						{{ details.authors }}, {{ details.year }}. {{ details.title }}. {{ details.journal }}. In review</a>
+						{{ details.authors }}. {{ details.title }}. In review</a>
 					{% endif %}
 			<h3>In press </h3>
 					{% if details.type_id != 8 %}
