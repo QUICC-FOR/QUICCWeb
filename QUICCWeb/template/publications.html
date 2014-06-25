@@ -7,14 +7,14 @@
 		 <div class="col-md-12">
 		<h2><i class="fa fa-file-text" style="margin-bottom:10px;"></i> Publications</h2>
 
-			<h3>In review </h3>
 				{% for details in publi_details%}
+			<h3>In review </h3>
 					{% if details.type_id == 8 %}
-						{{ details.authors }}, {{ details.year }}. {{ details.title }}. {{ details.journal }}. DOI: {{ details.doi }}. <a href="{{ details.pdf }}"> <i class="fa fa-file-pdf-o"></i></a>
+						{{ details.authors }}, {{ details.year }}. {{ details.title }}. {{ details.journal }}. In review</a>
 					{% endif %}
 			<h3>In press </h3>
 					{% if details.type_id != 8 %}
-						{{ details.authors }}, {{ details.year }}. {{ details.title }}. {{ details.journal }}. DOI: {{ details.doi }}. <a href="{{ details.pdf }}"> <i class="fa fa-file-pdf-o"></i></a>
+						{{ details.authors }}, {{ details.year }}. {{ details.title }}. {{ details.journal }}. DOI: {{ details.doi }}. <a href="{{ MEDIA_URL }}{{ details.pdf }}"> <i class="fa fa-file-pdf-o"></i></a>
 					{% endif %}
 
 				{% endfor %}
