@@ -4,15 +4,19 @@
 {% block content %}
 
 <div class="row">
-	     <div class="col-md-12">
+		 <div class="col-md-12">
 		<h2><i class="fa fa-file-text" style="margin-bottom:10px;"></i> Publications</h2>
 
 			<h3>In review </h3>
-			<p style="padding-left:35px;">Thuiller, W., Münkemüller, T., Shiffers, K., Georges, D., Dullinger, S, Eckhart, V.M., Ed- wards, T.C., Gravel, D., Kunstler, G., Merow, C. Moore, K., Piedallu, C, Vissault, S., Zimmermann, N.E., Zurell, Z. and Schurr, F.M. Does probability of occurrence relate to population dynamics? In review.</p>
-			<p style="padding-left:35px;">Liénard, J., Gravel, D., Talluto, M., Strigul, N. Data-intensive multi-dimensional modeling of forest dynamics. In review. </p>
-
+				{% for details in publi_details%}
+					{% if details.type_id == 8 %}
+						{{ details.authors }}, {{ details.year }}. {{ details.title }}. {{ details.journal }}. {{ details.volume }}: {{ details.page }}. DOI: {{ details.doi }}. <a href="{{ details.pdf }}"> <i class="fa fa-file-pdf-o"></i></a>
+					{% endif %}
 			<h3>In press </h3>
-			<p style="padding-left:35px;">Svenning, J.C, Gravel, D., Holt, R.D., Schurr, F., Thuiller, W., Muenkenmuller, T., Schif- fers, K., Dullinger, S., Edwards, T.C., Hickler, T., Higgins, S., Nabel, J., Pagel, J., Normand, S. 2014. The influence of interspecific interactions on species range expansion rates. Ecography. DOI: 10.1111/j.1600-0587.2013.00574.x <a href="{% static "Pub/Svenning_Ecography2014.pdf" %}"><i class="fa fa-file-pdf-o"></i></a></p>
-			<p style="padding-left:35px;">Snell., R., Huth, A., Nabel, J., Travis, J., Gravel, D., Bugmann, H. Gutierrez, A., Hickler, T., Higgins, S., Scherstjanoi, M., Reineking, B., Zurbriggen, N., Lischle, H. 2014. Using dynamic vegetation models to simulate plant range shifts. Ecography. DOI: 10.1111/ecog.00580 <a href="{% static "Pub/Snell2014.pdf" %}"><i class="fa fa-file-pdf-o"></i></a></p>
-			<p style="padding-left:35px;">Thuiller, W. Munkenmuller, T., Lavergne, S., Mouillot, D., Mouquet, N., Gravel, D. 2013. A road map for integrating eco-evolutionary processes into biodiversity models. Ecology Letters. 16 : 94-105. <a href="{% static "Pub/Thuiller2013_EcoLett.pdf" %}"> <i class="fa fa-file-pdf-o"></i></a></p>
+					{% if details.type_id != 8 %}
+						{{ details.authors }}, {{ details.year }}. {{ details.title }}. {{ details.journal }}. {{ details.volume }}: {{ details.page }}. DOI: {{ details.doi }}. <a href="{{ details.pdf }}"> <i class="fa fa-file-pdf-o"></i></a>
+					{% endif %}
+
+				{% endfor %}
+
 {% endblock %}
