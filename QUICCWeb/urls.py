@@ -26,7 +26,7 @@ urlpatterns = patterns('',
     url(r'^res/$', 'QUICCWeb.views.research', name='research'),
     url(r'^team/$', 'QUICCWeb.views.team', name='team'),
     url(r'^db/$', 'QUICCWeb.views.database', name='database'),
-    url(r'^pub/$', 'QUICCWeb.views.publications', name='publications'),
+    url(r'^pub/$', 'QUICCWeb.views.get_publi', name='publications'),
     url(r'^cont/$', 'QUICCWeb.views.contact', name='contact'),
     url(r'^register/$','resprofile.views.register', name='register'),
 )
