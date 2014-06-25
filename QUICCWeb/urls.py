@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, include, url
 from QUICCWeb.views import *
 from resprofile.views import *
-
+from django.conf import settings
 from django.contrib import admin
 admin.autodiscover()
 # Uncomment the next two lines to enable the admin:
@@ -20,7 +20,7 @@ urlpatterns = patterns('',
     (r'^grappelli/', include('grappelli.urls')), # grappelli URLS
     url(r'^admin/publications/publication/import_bibtex/$', 'publications.admin_views.import_bibtex'),
     (r'^admin/',  include(admin.site.urls)), # admin site
-   # url(r'^publications/', include('publications.urls')),
+    url(r'^publications/', include('publications.urls')),
     url(r'^$', welcome),
     url(r'^home/$', 'QUICCWeb.views.home', name='home'),
     url(r'^res/$', 'QUICCWeb.views.research', name='research'),
@@ -30,3 +30,11 @@ urlpatterns = patterns('',
     url(r'^cont/$', 'QUICCWeb.views.contact', name='contact'),
     url(r'^register/$','resprofile.views.register', name='register'),
 )
+
+# UNDERNEATH your urlpatterns definition, add the following two lines:
+if settings.DEBUG:
+    urlpatterns += patterns(
+        'django.views.static',
+        (r'media/(?P<path>.*)',
+        'serve',
+        {'document_root': settings.MEDIA_ROOT}), )
