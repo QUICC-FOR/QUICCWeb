@@ -10,13 +10,17 @@
 			<h3>In review </h3>
 				{% for details in publi_details%}
 					{% if details.type_id == 8 %}
+					<p>
 						{{ details.authors }}. {{ details.title }}. In review</a>
+					</p>
 					{% endif %}
 				{% endfor %}
 			<h3>In press </h3>
 				{% for details in publi_details%}
 					{% if details.type_id != 8 %}
+					<p>
 						{{ details.authors }}, {{ details.year }}. {{ details.title }}. {{ details.journal }}. DOI: {{ details.doi }}. <a href="{{ MEDIA_URL }}{{ details.pdf }}"> <i class="fa fa-file-pdf-o"></i></a>
+					</p>
 					{% endif %}
 				{% endfor %}
 {% endblock %}
