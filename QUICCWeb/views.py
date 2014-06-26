@@ -9,7 +9,7 @@ import datetime
 
 def get_publi(request):
 
-        publi = Publication.objects.order_by('year')
+        publi = Publication.objects.order_by('-year')
         dicPubli = {
             "publi_details" : publi
         }

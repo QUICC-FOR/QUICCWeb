@@ -4,11 +4,22 @@
 {% block content %}
 
 <div class="row">
-		 <div class="col-md-12">
-		<h2><i class="fa fa-file-text" style="margin-bottom:10px;"></i> Publications</h2>
+	<div class="col-md-12">
+		<h2><i class="fa fa-file-text" ></i> Publications</h2>
+	</div>
+
+	<div class="col-md-12">
+		<div class="alert alert-info alert-dismissable">
+		  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+		  <font color="#333333" >All softwares and tools developed in this project are available on <a class="link" rel="external" href="https://github.com/QUICC-FOR"> Github <i class="fa fa-github fa-2x"> </i> </font> </a>
+		</div>
+	</div>
+
+		 <div class="col-md-12" style="margin-top:-10px;">
 
 			<h3>In review </h3>
 				{% for details in publi_details%}
+					{# In Review #}
 					{% if details.type_id == 8 %}
 					<p>
 						{{ details.authors }}. {{ details.title }}. In review</a>
@@ -17,9 +28,20 @@
 				{% endfor %}
 			<h3>In press </h3>
 				{% for details in publi_details%}
-					{% if details.type_id != 8 %}
+					{% if details.type_id = 1 %}
+					{# Articles #}
 					<p>
-						{{ details.authors }}, {{ details.year }}. {{ details.title }}. {{ details.journal }}. DOI: {{ details.doi }}. <a href="{{ MEDIA_URL }}{{ details.pdf }}"> <i class="fa fa-file-pdf-o"></i></a>
+						{{ details.authors }},
+						({{ details.year }}).
+						{{ details.title }}.
+						{{ details.journal }}.
+						{% if details.volume %}Vol. {{ details.volume }}</a>{% endif %}
+						{% if details.pages %}: pp. {{ details.pages }}</a>{% endif %} </br>
+						{% if details.doi %}<a class="link" rel="external" href="http://dx.doi.org/{{ details.doi }}"> DOI </a>{% endif %}
+						{% if details.pdf %}/ <a class="link" rel="external" href="{{ MEDIA_URL }}{{ details.pdf }}"><i class="fa fa-file-pdf-o"></i></a>{% endif %}
+						{% if details.url %}/ <a class="link" rel="external" href="{{ details.url }}"><i class="fa fa-link"></i></a>{% endif %}
+						{% if details.code %}/ <a class="link" href="{{ details.code }}"><i class="fa fa-file-code-o"></i></a>{% endif %}
+						/ <a href="/publications/{{ details.pk }}/?bibtex">BibTex</a>
 					</p>
 					{% endif %}
 				{% endfor %}
