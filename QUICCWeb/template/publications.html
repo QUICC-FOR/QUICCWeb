@@ -36,7 +36,7 @@
 						{{ details.title }}.
 						{{ details.journal }}.
 						{% if details.volume %}Vol. {{ details.volume }}</a>{% endif %}
-						{% if details.pages %}: pp. {{ details.pages }}</a>{% endif %} </br>
+						{% if details.pages %} pp. {{ details.pages }}</a>{% endif %} </br>
 						{% if details.doi %}<a class="link" rel="external" href="http://dx.doi.org/{{ details.doi }}"> DOI </a>{% endif %}
 						{% if details.pdf %}/ <a class="link" rel="external" href="{{ MEDIA_URL }}{{ details.pdf }}"><i class="fa fa-file-pdf-o"></i></a>{% endif %}
 						{% if details.url %}/ <a class="link" rel="external" href="{{ details.url }}"><i class="fa fa-link"></i></a>{% endif %}
